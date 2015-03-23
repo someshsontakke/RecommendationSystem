@@ -1,0 +1,1139 @@
+somesh@someshpc ~ $ octave
+GNU Octave, version 3.6.4
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type `warranty'.
+
+Octave was configured for "x86_64-pc-linux-gnu".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+
+For information about changes from previous versions, type `news'.
+
+octave:1> 5+6
+ans =  11
+octave:2> 3-2
+ans =  1
+octave:3> 2^6
+ans =  64
+octave:4> 1==2
+ans = 0
+octave:5> 1~=2
+ans =  1
+octave:6> 1&&0
+ans = 0
+octave:7> 1||0
+ans =  1
+octave:8> xor(1,0)
+ans =  1
+octave:9> PS1('>> ');
+>> a =3;
+>> c = hi
+error: 'hi' undefined near line 11 column 5
+>> c = 'hi'
+c = hi
+>> a=pi
+a =  3.1416
+>> disp(a)
+ 3.1416
+>> disp(sprintf('2 decimals:%0.2f',a))
+2 decimals:3.14
+>> disp(sprintf('6 decimals:%0.6f',a))
+6 decimals:3.141593
+>> format long
+>> a
+a =  3.14159265358979
+>> format short
+>> a
+a =  3.1416
+>> A = [1 2; 3 4; 5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> A = [1 2;
+> 3 4;
+> 5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> v = [1 2 3]
+v =
+
+   1   2   3
+
+>> v = [1;2;3]
+v =
+
+   1
+   2
+   3
+
+>> v = 1:0.1:2
+v =
+
+ Columns 1 through 7:
+
+    1.0000    1.1000    1.2000    1.3000    1.4000    1.5000    1.6000
+
+ Columns 8 through 11:
+
+    1.7000    1.8000    1.9000    2.0000
+
+>> v = 1:6
+v =
+
+   1   2   3   4   5   6
+
+>> ones(2,3)
+ans =
+
+   1   1   1
+   1   1   1
+
+>> c = 2*ones(2,3)
+c =
+
+   2   2   2
+   2   2   2
+
+>> w = ones(1,3)
+w =
+
+   1   1   1
+
+>> w = zeros(1,3)
+w =
+
+   0   0   0
+
+>> w = rand(1,3)
+w =
+
+   0.58150   0.62495   0.45319
+
+>> w = rand(3,3)
+w =
+
+   0.26450   0.23594   0.28519
+   0.78348   0.39056   0.13943
+   0.37560   0.44772   0.97080
+
+>> w =randn(1,3)
+w =
+
+   1.40634   2.30796   0.48087
+
+>> w = -6+sqrt(10)*(randn(1,100))
+w =
+
+ Columns 1 through 7:
+
+   -6.84567   -5.42278   -3.18532   -0.13086  -12.30366   -9.08672   -8.25249
+
+ Columns 8 through 14:
+
+   -6.09289   -7.11266   -7.36723   -2.43918   -7.06849   -8.86160   -4.20695
+
+ Columns 15 through 21:
+
+   -8.66373   -9.35719   -3.93606   -9.70974   -4.75824   -5.45806   -4.97308
+
+ Columns 22 through 28:
+
+   -4.59364   -4.35108   -5.74049   -8.98096   -1.55517   -5.70636   -3.60173
+
+ Columns 29 through 35:
+
+   -7.38827   -1.75786   -6.48586   -0.70257   -7.29139   -7.72304   -4.68774
+
+ Columns 36 through 42:
+
+   -6.40184   -8.65116   -7.87357   -9.02837   -6.28872  -12.98159   -6.85176
+
+ Columns 43 through 49:
+
+  -10.69216   -3.72055   -2.34522   -6.94241   -8.41428   -9.43945   -6.12489
+
+ Columns 50 through 56:
+
+   -3.38184   -4.87097  -16.15978   -7.46898   -5.75840   -4.10653   -8.78051
+
+ Columns 57 through 63:
+
+   -9.83598   -9.39464   -6.62071   -1.38945   -4.36884   -7.63165  -10.65183
+
+ Columns 64 through 70:
+
+   -8.26470   -7.69577  -10.15568   -3.85658   -2.99340   -1.52054   -3.03482
+
+ Columns 71 through 77:
+
+   -3.76984   -7.06682   -5.27642   -3.43730   -3.40720   -4.50983   -2.46469
+
+ Columns 78 through 84:
+
+   -7.02885   -8.16477   -4.24678   -6.31932  -11.19615   -5.03482   -2.99185
+
+ Columns 85 through 91:
+
+   -7.88510   -9.04851   -3.71886   -8.97725   -8.21350   -7.67698   -4.46173
+
+ Columns 92 through 98:
+
+   -7.43381   -5.46136   -2.36859  -12.34654   -8.05480   -5.75246   -7.04639
+
+ Columns 99 and 100:
+
+   -6.30641   -5.41341
+
+>> hist(w)
+error: popen2: popen2 (child): unable to start process -- No such file or directory
+sh: 1: gnuplot: not found
+error: called from:
+error:   /usr/share/octave/3.6.4/m/plot/private/__gnuplot_open_stream__.m at line 30, column 44
+error:   /usr/share/octave/3.6.4/m/plot/__gnuplot_drawnow__.m at line 72, column 19
+error: 'unset' undefined near line 35 column 1
+
+
+^C
+
+^Z
+[1]+  Stopped                 octave
+[148]somesh@someshpc ~ $ octave
+GNU Octave, version 3.6.4
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type `warranty'.
+
+Octave was configured for "x86_64-pc-linux-gnu".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+
+For information about changes from previous versions, type `news'.
+
+octave:1> ^C
+octave:1> w = -6+sqrt(10)*(randn(1,100))
+w =
+
+ Columns 1 through 7:
+
+   -6.65408   -7.87306   -5.45121    0.95445   -5.09520   -2.37119   -0.43435
+
+ Columns 8 through 14:
+
+   -9.24787   -7.22427   -8.66713   -6.79930   -5.09958   -4.41434  -11.84965
+
+ Columns 15 through 21:
+
+   -9.18953   -4.85566   -2.74935   -5.90286   -3.00663   -5.89985   -4.74026
+
+ Columns 22 through 28:
+
+   -6.38253   -7.00513   -7.69714   -2.18185   -5.20374   -5.76165   -8.72172
+
+ Columns 29 through 35:
+
+   -6.87069   -9.44031   -4.66895   -8.60781   -8.88771  -11.37704   -8.74464
+
+ Columns 36 through 42:
+
+  -11.07989   -3.16828   -5.80867   -8.29985   -7.14778   -1.13835   -4.08520
+
+ Columns 43 through 49:
+
+   -8.10812   -7.87594   -3.46180   -1.69280   -5.31926  -13.44753  -12.25143
+
+ Columns 50 through 56:
+
+   -8.54428   -7.33450   -4.86003   -3.63468   -8.04713   -9.01218   -0.88024
+
+ Columns 57 through 63:
+
+   -8.26805   -0.14019   -5.60688   -1.32686   -5.32921   -5.35034   -9.11413
+
+ Columns 64 through 70:
+
+   -2.74022   -6.08495   -6.22492   -8.38482   -4.16527   -3.64781   -0.49578
+
+ Columns 71 through 77:
+
+   -9.58163   -8.21467   -4.47679  -11.13284   -7.68476   -5.67295   -5.05577
+
+ Columns 78 through 84:
+
+   -3.49970   -5.44186   -5.61937   -9.24985   -8.37957   -1.64519   -4.98712
+
+ Columns 85 through 91:
+
+   -7.59008   -5.67032  -10.46979   -8.71283  -10.97277  -11.44475  -10.51673
+
+ Columns 92 through 98:
+
+   -4.77278   -4.28404   -3.99050   -6.95298   -1.67503   -8.55415   -2.69779
+
+ Columns 99 and 100:
+
+   -1.99261   -6.12523
+
+octave:2> hist(w)
+octave:3> hist(w,50)
+octave:4> w = -6+sqrt(10)*(randn(1,10000));
+
+octave:5> hist(w,50)
+octave:6> eye(4)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0
+   0   1   0   0
+   0   0   1   0
+   0   0   0   1
+
+octave:7> eye(6)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0   0
+   0   1   0   0   0   0
+   0   0   1   0   0   0
+   0   0   0   1   0   0
+   0   0   0   0   1   0
+   0   0   0   0   0   1
+
+octave:8> help(eye)
+
+octave:11> A = [1 2;
+> 3 4;
+> 5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:12> B = [11 12;
+> 13 14; 15 16]
+B =
+
+   11   12
+   13   14
+   15   16
+
+octave:13> c = [1 1; 2 2]
+c =
+
+   1   1
+   2   2
+
+octave:14> A*C
+error: 'C' undefined near line 14 column 3
+octave:14> A*c
+ans =
+
+    5    5
+   11   11
+   17   17
+
+octave:15> A.*B
+ans =
+
+   11   24
+   39   56
+   75   96
+
+octave:16> A.^2
+ans =
+
+    1    4
+    9   16
+   25   36
+
+octave:17> v = [1; 2; 3]
+v =
+
+   1
+   2
+   3
+
+octave:18> 1./v
+ans =
+
+   1.00000
+   0.50000
+   0.33333
+
+octave:19> 1./A
+ans =
+
+   1.00000   0.50000
+   0.33333   0.25000
+   0.20000   0.16667
+
+octave:20> log(v)
+ans =
+
+   0.00000
+   0.69315
+   1.09861
+
+octave:21> exp(v)
+ans =
+
+    2.7183
+    7.3891
+   20.0855
+
+octave:22> abs(v)
+ans =
+
+   1
+   2
+   3
+
+octave:23> -v
+ans =
+
+  -1
+  -2
+  -3
+
+octave:24> v +ones(length(v),1)
+ans =
+
+   2
+   3
+   4
+
+octave:25> v +ones(3,1)
+ans =
+
+   2
+   3
+   4
+
+octave:26> v+1
+ans =
+
+   2
+   3
+   4
+
+octave:27> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:28> A'
+ans =
+
+   1   3   5
+   2   4   6
+
+octave:29> (A')'
+ans =
+
+   1   2
+   3   4
+   5   6
+
+octave:30> a = [1 15 2 0.5]
+a =
+
+    1.00000   15.00000    2.00000    0.50000
+
+octave:31> val = max(a)
+val =  15
+octave:32> [val, ind]=max(a)
+val =  15
+ind =  2
+octave:33> max(A)
+ans =
+
+   5   6
+
+octave:34> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:35> a
+a =
+
+    1.00000   15.00000    2.00000    0.50000
+
+octave:36> a<3
+ans =
+
+   1   0   1   1
+
+octave:37> a,0.5
+a =
+
+    1.00000   15.00000    2.00000    0.50000
+
+ans =  0.50000
+octave:38> a<0.5
+ans =
+
+   0   0   0   0
+
+octave:39> find(a<3)
+ans =
+
+   1   3   4
+
+octave:40> A = magic(3)
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+octave:41> help magic
+'magic' is a function from the file /usr/share/octave/3.6.4/m/special-matrix/magic.m
+
+ -- Function File: magic (N)
+
+     Create an N-by-N magic square.  A magic square is an arrangement of
+     the integers '1:n^2' such that the row sums, column sums, and
+     diagonal sums are all equal to the same value.
+
+     Note: N must be greater than 2 for the magic square to exist.
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+octave:42> A
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+octave:43> [r,c ] find(A>=7)
+parse error:
+
+  syntax error
+
+>>> [r,c ] find(A>=7)
+               ^
+
+octave:43> [r,c ] = find(A>=7)
+r =
+
+   1
+   3
+   2
+
+c =
+
+   1
+   2
+   3
+
+octave:44> A(2,3)
+ans =  7
+octave:45> sum(a)
+ans =  18.500
+octave:46> sum(A)
+ans =
+
+   15   15   15
+
+octave:47> prod(a)
+ans =  15
+octave:48> prod(A)
+ans =
+
+   96   45   84
+
+octave:49> floor(a)
+ans =
+
+    1   15    2    0
+
+octave:50> ceil(a)
+ans =
+
+    1   15    2    1
+
+octave:51> rand(3)
+ans =
+
+   0.30389   0.82873   0.28640
+   0.80130   0.71730   0.40901
+   0.31538   0.64522   0.71117
+
+octave:52> max(rand(3), rand(3))
+ans =
+
+   0.60212   0.97368   0.79536
+   0.82375   0.52663   0.73274
+   0.69667   0.31621   0.55942
+
+octave:53> max(A,[],1)
+ans =
+
+   8   9   7
+
+octave:54> max(A,[],2)
+ans =
+
+   8
+   7
+   9
+
+octave:55> max(A)
+ans =
+
+   8   9   7
+
+octave:56> max(max(A))
+ans =  9
+octave:57> max(A(:))
+ans =  9
+octave:58> A=magic(9)
+A =
+
+   47   58   69   80    1   12   23   34   45
+   57   68   79    9   11   22   33   44   46
+   67   78    8   10   21   32   43   54   56
+   77    7   18   20   31   42   53   55   66
+    6   17   19   30   41   52   63   65   76
+   16   27   29   40   51   62   64   75    5
+   26   28   39   50   61   72   74    4   15
+   36   38   49   60   71   73    3   14   25
+   37   48   59   70   81    2   13   24   35
+
+octave:59> sum(A,1)
+ans =
+
+   369   369   369   369   369   369   369   369   369
+
+octave:60> sum(A,2)
+ans =
+
+   369
+   369
+   369
+   369
+   369
+   369
+   369
+   369
+   369
+
+octave:61> eye(9)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0   0   0   0   0
+   0   1   0   0   0   0   0   0   0
+   0   0   1   0   0   0   0   0   0
+   0   0   0   1   0   0   0   0   0
+   0   0   0   0   1   0   0   0   0
+   0   0   0   0   0   1   0   0   0
+   0   0   0   0   0   0   1   0   0
+   0   0   0   0   0   0   0   1   0
+   0   0   0   0   0   0   0   0   1
+
+octave:62> A.*eye(9)
+ans =
+
+   47    0    0    0    0    0    0    0    0
+    0   68    0    0    0    0    0    0    0
+    0    0    8    0    0    0    0    0    0
+    0    0    0   20    0    0    0    0    0
+    0    0    0    0   41    0    0    0    0
+    0    0    0    0    0   62    0    0    0
+    0    0    0    0    0    0   74    0    0
+    0    0    0    0    0    0    0   14    0
+    0    0    0    0    0    0    0    0   35
+
+octave:63> sum(A.*eye(9))
+ans =
+
+   47   68    8   20   41   62   74   14   35
+
+octave:64> sum(sum(A.*eye(9)))
+ans =  369
+octave:65> sum(sum(A.*flipud(eye(9))))
+ans =  369
+octave:66> pinv(A)
+ans =
+
+ Columns 1 through 6:
+
+   4.5353e-04  -1.2230e-03   1.6729e-03   1.2647e-02  -1.2062e-02   3.1805e-04
+   3.0111e-04   3.0111e-04   1.2801e-02  -1.2199e-02   3.0111e-04  -1.0878e-03
+  -1.0706e-03   1.4019e-02  -1.2045e-02   3.0091e-04   4.5374e-04   1.4870e-04
+   1.2647e-02  -1.2045e-02   3.0132e-04   3.0300e-04  -1.0725e-03   1.6729e-03
+  -1.0810e-02   3.0111e-04   3.0111e-04   3.0111e-04   3.0111e-04   3.0111e-04
+   2.8418e-04   4.7047e-04   1.4870e-04  -1.0706e-03   1.6747e-03   2.9923e-04
+   3.0300e-04   2.8230e-04   3.1805e-04   4.5353e-04   1.4849e-04   3.0132e-04
+   3.0111e-04   3.0111e-04  -1.0878e-03   1.6900e-03   3.0111e-04   1.2801e-02
+   3.0091e-04   3.0320e-04   2.9923e-04   2.8418e-04   1.2664e-02  -1.2045e-02
+
+ Columns 7 through 9:
+
+   3.0300e-04   2.9902e-04   3.0132e-04
+   1.6900e-03   3.0111e-04   3.0111e-04
+   2.8418e-04   3.1993e-04   2.9923e-04
+   4.5353e-04   1.3176e-04   3.1805e-04
+   3.0111e-04   3.0111e-04   1.1412e-02
+   3.0091e-04   1.2647e-02  -1.2045e-02
+   1.2647e-02  -1.3416e-02   1.6729e-03
+  -1.2199e-02   3.0111e-04   3.0111e-04
+  -1.0706e-03   1.8253e-03   1.4870e-04
+
+octave:67> A = magic(3)
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+octave:68> pinv(A)
+ans =
+
+   0.147222  -0.144444   0.063889
+  -0.061111   0.022222   0.105556
+  -0.019444   0.188889  -0.102778
+
+octave:69> temp = pinv(A)
+temp =
+
+   0.147222  -0.144444   0.063889
+  -0.061111   0.022222   0.105556
+  -0.019444   0.188889  -0.102778
+
+octave:70> temp*A
+ans =
+
+   1.00000   0.00000  -0.00000
+  -0.00000   1.00000   0.00000
+   0.00000   0.00000   1.00000
+
+octave:71> %plotting
+octave:71> t = [0:0.01:0.98];
+octave:72> t
+t =
+
+ Columns 1 through 7:
+
+   0.00000   0.01000   0.02000   0.03000   0.04000   0.05000   0.06000
+
+ Columns 8 through 14:
+
+   0.07000   0.08000   0.09000   0.10000   0.11000   0.12000   0.13000
+
+ Columns 15 through 21:
+
+   0.14000   0.15000   0.16000   0.17000   0.18000   0.19000   0.20000
+
+ Columns 22 through 28:
+
+   0.21000   0.22000   0.23000   0.24000   0.25000   0.26000   0.27000
+
+ Columns 29 through 35:
+
+   0.28000   0.29000   0.30000   0.31000   0.32000   0.33000   0.34000
+
+ Columns 36 through 42:
+
+   0.35000   0.36000   0.37000   0.38000   0.39000   0.40000   0.41000
+
+ Columns 43 through 49:
+
+   0.42000   0.43000   0.44000   0.45000   0.46000   0.47000   0.48000
+
+ Columns 50 through 56:
+
+   0.49000   0.50000   0.51000   0.52000   0.53000   0.54000   0.55000
+
+ Columns 57 through 63:
+
+   0.56000   0.57000   0.58000   0.59000   0.60000   0.61000   0.62000
+
+ Columns 64 through 70:
+octave:73> y1 = sin(2*pi*4*t)
+y1 =
+
+octave:76> plot(t,y2);
+octave:77> plot(t,y1);
+octave:78> hold on;
+octave:79> plot(t,y2, 'r');
+octave:80> xlabel('time')
+octave:81>          line 0: warning: Cannot toggle log scale for volatile data
+
+octave:81> ylabel('y value');
+octave:82> legend('sin', 'cos')
+octave:83> title ('My plot')
+octave:84> pwd
+ans = /home/somesh
+octave:85> cd Documents/
+octave:86> ls
+cans	    edx_AI    nmfcl		 Repositories.txt  sdes2015
+cans_asgn2  hifi.txt  personal_projects  sdes		   Sublime Text 2
+octave:87> cd personal_projects/
+octave:88> ls
+dynamic_programming  sudoku_solver
+octave:89> mkdir octave_tut
+ans =  1
+octave:90> cd octave_tut/
+octave:91> print -dpng 'myPlot.png'
+warning: print.m: epstool binary is not available.
+Some output formats are not available.
+warning: print.m: fig2dev binary is not available.
+Some output formats are not available.
+warning: print.m: pstoedit binary is not available.
+Some output formats are not available.
+octave:92> help plot
+'plot' is a function from the file /usr/share/octave/3.6.4/m/plot/plot.m
+
+ -- Function File: plot (Y)
+ -- Function File: plot (X, Y)
+ -- Function File: plot (X, Y, PROPERTY, VALUE, ...)
+ -- Function File: plot (X, Y, FMT)
+ -- Function File: plot (H, ...)
+ -- Function File: H = plot (...)
+     Produce two-dimensional plots.
+
+     Many different combinations of arguments are possible.  The
+     simplest form is
+
+          plot (Y)
+
+     where the argument is taken as the set of Y coordinates and the X
+     coordinates are taken to be the indices of the elements starting
+     with 1.
+
+     To save a plot, in one of several image formats such as PostScript
+     or PNG, use the 'print' command.
+
+     If more than one argument is given, they are interpreted as
+
+          plot (Y, PROPERTY, VALUE, ...)
+
+     or
+
+          plot (X, Y, PROPERTY, VALUE, ...)
+
+     or
+
+          plot (X, Y, FMT, ...)
+
+     and so on.  Any number of argument sets may appear.  The X and Y
+     values are interpreted as follows:
+
+        * If a single data argument is supplied, it is taken as the set
+          of Y coordinates and the X coordinates are taken to be the
+octave:93> figure(1); plot(t,y1);
+octave:94> figure(2); plot(t,y2);
+octave:95> close
+octave:96> close
+octave:97> subplot(1,2,1);
+octave:98> plot(t,y1)
+octave:99> subplot(1,2,2);
+octave:100> plot(t,y2)
+octave:101> axis([0.5 1 -1 1])
+octave:102> clf;
+octave:103> A = magic(5)
+A =
+
+   17   24    1    8   15
+   23    5    7   14   16
+    4    6   13   20   22
+   10   12   19   21    3
+   11   18   25    2    9
+
+octave:104> imagesc(A)
+octave:105> imagesc(A), colorbar, colormap gray;
+octave:106> A(1,2)
+ans =  24
+octave:107> A(4,5)
+ans =  3
+octave:108> A = magic(15)
+A =
+
+ Columns 1 through 13:
+
+   122   139   156   173   190   207   224     1    18    35    52    69    86
+   138   155   172   189   206   223    15    17    34    51    68    85   102
+   154   171   188   205   222    14    16    33    50    67    84   101   118
+   170   187   204   221    13    30    32    49    66    83   100   117   134
+   186   203   220    12    29    31    48    65    82    99   116   133   150
+   202   219    11    28    45    47    64    81    98   115   132   149   151
+   218    10    27    44    46    63    80    97   114   131   148   165   167
+     9    26    43    60    62    79    96   113   130   147   164   166   183
+    25    42    59    61    78    95   112   129   146   163   180   182   199
+    41    58    75    77    94   111   128   145   162   179   181   198   215
+    57    74    76    93   110   127   144   161   178   195   197   214     6
+    73    90    92   109   126   143   160   177   194   196   213     5    22
+    89    91   108   125   142   159   176   193   210   212     4    21    38
+   105   107   124   141   158   175   192   209   211     3    20    37    54
+   106   123   140   157   174   191   208   225     2    19    36    53    70
+
+ Columns 14 and 15:
+
+   103   120
+   119   121
+   135   137
+   136   153
+   152   169
+   168   185
+   184   201
+   200   217
+   216     8
+     7    24
+    23    40
+    39    56
+    55    72
+    71    88
+    87   104
+
+octave:109> imagesc(A), colorbar, colormap gray;
+octave:110> a = 1, b=2, c=3
+a =  1
+b =  2
+c =  3
+octave:111> a = 1; b=2; c=3;
+octave:112> %comma chaining with no print prompts
+octave:112> % writing control statements
+octave:112> v = zeros(10,1)
+v =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+octave:113> for i = 1:10
+> v(i) = 2^i
+> end;
+v =
+
+   2
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+v =
+
+   2
+   4
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+v =
+
+   2
+   4
+   8
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+octave:114> indices=1:10
+indices =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:115> for i=indices,
+> disp(i);
+> end;
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+octave:116> for i = 1:10
+> v(i)=2^i;
+> end;
+octave:117> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+octave:118> i = 1;
+octave:119> while i<=5,
+> v(i) = 100;
+> i = i+1;
+> end;
+octave:120> v
+v =
+
+    100
+    100
+    100
+    100
+    100
+     64
+    128
+    256
+    512
+   1024
+
+octave:121> i = 1;
+octave:122> while true,
+> v(i) = 99;
+> i = i+1;
+> if i == 6,
+> break;
+> end;
+> end;
+octave:123> v
+v =
+
+     99
+     99
+     99
+     99
+     99
+     64
+    128
+    256
+    512
+   1024
+
+octave:124> v(1)
+ans =  99
+octave:125> if v(1)==1,
+> disp('the value is one')
+> end;
+octave:126> %functions
+octave:126> pwd
+ans = /home/somesh/Documents/personal_projects/octave_tut
+octave:127> squarethisnumber(5)
+ans =  25
+octave:128> squarethisnumber(2345)
+ans =  5499025
+octave:129> squareandcubethisnumber(5)
+ans =  25
+octave:130> [a,b]= squareandcubethisnumber(5)
+a =  25
+b =  125
+octave:131> X = [1 2; 1 2; 1 3]
+X =
+
+   1   2
+   1   2
+   1   3
+
+octave:132> y = [1;2;3]
+y =
+
+   1
+   2
+   3
+
+octave:133>  theta=[0;1];
+octave:134> j = costFunctionJ(X,y,theta)
+error: 'examples' undefined near line 8 column 1
+error: called from:
+error:   /home/somesh/Documents/personal_projects/octave_tut/costFunctionJ.m at line 8, column 1
+octave:134> j = costFunctionJ(X,y,theta)
+j =  0.16667
+octave:135> X = [1 1; 1 2; 1 3]
+X =
+
+   1   1
+   1   2
+   1   3
+
+octave:136> j = costFunctionJ(X,y,theta)
+j = 0
+octave:137>  theta=[0;0];
+octave:138> j = costFunctionJ(X,y,theta)
+j =  2.3333
+octave:139> %Vectorization
+octave:139> %accessing specialized numerical linear lagebra libraries
+octave:139> % Unvectorized implementation of matrix multiplication
+octave:139> 
+octave:139> prediction = 0.0;
+octave:140> for j = 1:n+1,
+> prediction = prediction + theta(j)*x(j)
+> end;
+error: 'n' undefined near line 140 column 11
+error: invalid limit value in colon expression
+octave:140> for j = 1:4,
+> prediction = prediction + theta(j)*x(j)
+> end;
+error: 'x' undefined near line 141 column 36
+octave:140> prediction = theta' *x;
+error: 'x' undefined near line 140 column 22
+octave:140> prediction = theta' *X;
+error: operator *: nonconformant arguments (op1 is 1x2, op2 is 3x2)
+octave:140> prediction = theta' *X';
+octave:141> prediction 
+prediction =
+
+   0   0   0
+
+octave:142> 
