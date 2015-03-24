@@ -1,5 +1,5 @@
 #python file to parse the users.dat file
-def parse_isers_data():
+def parse_users_data():
 	data_array = []
 	counter = 0
 	working_string = ''
@@ -46,6 +46,5 @@ def parse_isers_data():
 			data_array[i][1] = 0
 		else:
 			data_array[i][1] = 1
-	#print data_array[10]
+	#print data_array[10], data_array[10][0]
 	return data_array
-

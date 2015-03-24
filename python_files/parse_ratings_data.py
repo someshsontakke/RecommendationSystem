@@ -28,7 +28,9 @@ def parse_ratings_data():
 					#print number
 					number = 0
 			counter +=1
-	#print data_array[1900:2000]
+	#print len(data_array), data_array[len(data_array)-1]
+		#print data_array[1900:2000]
 	return data_array
+
 
 
