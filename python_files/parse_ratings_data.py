@@ -31,7 +31,4 @@ def parse_ratings_data():
 	#print data_array[1900:2000]
 	return data_array
 
-a = parse_ratings_data()[:200]
-print a
-
 
